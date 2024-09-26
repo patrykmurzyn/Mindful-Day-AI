@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindful Day AI</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        
+        body {{
+            font-family: 'Poppins', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+        }}
+        .container {{
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            overflow: hidden;
+        }}
+        header {{
+            background-color: #6c5ce7;
+            padding: 20px;
+            text-align: center;
+        }}
+        h1 {{
+            margin: 0;
+            font-size: 24px;
+            font-weight: 600;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }}
+        .content {{
+            padding: 20px;
+        }}
+        h2 {{
+            color: #6c5ce7;
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }}
+        .summary {{
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }}
+        .fact {{
+            font-style: italic;
+            color: #666;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #e6e6e6;
+            border-radius: 5px;
+        }}
+        .schedule {{
+
+        }}
+        .schedule-item {{
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            border-left: 3px solid #6c5ce7;
+        }}
+        .schedule-item:nth-child(odd) {{
+            background-color: #f5f5f5;
+        }}
+        .time {{
+            font-weight: 600;
+            color: #6c5ce7;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }}
+        .activity {{
+            padding-left: 10px;
+        }}
+        .break {{
+            background-color: #e8f6f3;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            border-left: 3px solid #6c5ce7;
+        }}
+        @media (max-width: 600px) {{
+            body {{
+                padding: 10px;
+            }}
+            .container {{
+                border-radius: 0;
+            }}
+        }}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Mindful Day AI</h1>
+        </header>
+        <div class="content">
+            <div class="summary">
+                <h2>Today's Overview</h2>
+                <p>{summary}</p>
+            </div>
+            
+            <div class="fact">
+                <p><strong>Interesting Fact:</strong> {today_fact}</p>
+            </div>
+            
+            <h2>Your Schedule</h2>
+            <div class="schedule">
+                {schedule_items}
+            </div>
+            
+            <h2>Mindful Breaks</h2>
+            <div class="breaks">
+                {break_items}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
